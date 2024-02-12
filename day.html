@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <script src="day-script.js" defer></script>
+    <script src="api.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=https://code.jquery.com/jquery-3.3.1.min.js crossorigin="anonymous"></script>
+
+    <style>
+      body{
+        background-color: rgb(236, 235, 233);
+        height: 100%;
+        width: 1000px;
+        z-index: -1;
+        font-family: sans-serif;
+      }.back-to-home{
+        margin-top: 25px;
+        margin-left: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+      }.back-to-home span:hover {
+      color: rgb(234, 234, 234);
+    }
+      .day-header{
+        padding-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: inline-block;
+      }.send-schedule{
+        background-color: rgb(201, 234, 185);
+        display: inline-block;
+        margin-left: 100;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+      }
+      .schedule-container{
+        height: 45px; 
+      }.event{
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-left-color:rgb(175, 173, 173)
+      }
+      .time{
+        text-align: right;
+        font-size: 15px;
+        font-weight: bold;
+        margin-right:0;
+        padding-right: 5;
+      }.blank{
+        height: 12px;
+        padding-left: 0;
+        margin-left: 0;
+        border-bottom-style:solid;
+        border-bottom-width: 1px;
+        border-bottom-color:rgb(175, 173, 173) ;
+      }.schedule-main{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }.schedule-main:hover{
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgb(242, 210, 156);
+      }.popup{
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.1);
+        transition: transform 0.4s, top 0.4s;
+        visibility: hidden;
+        height: 120px;
+        width: 250px;
+        background-color: rgb(184, 196, 188);
+        border-radius: 8px;
+        border-style: solid;
+        border-width: 1;
+        border-color: rgb(219, 218, 218);
+      }.open-popup{
+        visibility: visible;
+        position: fixed;
+        margin-top: 300px;
+        transform: translate(-50%, -50%)scale(1);
+      }
+      .popup-button{
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 20px;
+        background-color: none;
+        font-size: 10px;
+        display: inline;
+        margin-bottom: 15;
+      }.inputs{
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 10px;
+      }.popup-title{
+        font-size: 17px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 1px;
+      }.popup-location{
+        
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: none;
+      }.new-event{
+        font-weight: bold;
+      }.event-container{
+        font-weight: bold;
+        background-color: rgb(157, 191, 221);
+        width: 300px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+      }.send-schedule-color{
+        background-color: rgb(202, 241, 202);
+      }.open-aveirability{
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        background-color: rgb(194, 194, 110);
+      }.time-aveirability{
+        margin-bottom: 10px;
+
+      }.checkbox{
+        margin-top: 2px;
+      }.myCheckbox{
+        margin-top: 4px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="open-aveirability">
+        
+      </div>
+      <div class="back-to-home">
+        <span>Home</span></div>
+      <div class="day-header">
+      </div>
+      <div class="send-schedule">
+        Send Avairability
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-12 time-schedule row">
+
+        </div>
+        <div class="col-md-1 col-12 checkbox row"></div>
+        <div class="col-md-5 col-0 event">Events</div>
+      </div>
+    </div>
+  </body>
+</html>
